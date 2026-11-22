@@ -190,6 +190,12 @@ Build the image:
 docker build -t german-credit-api .
 ```
 
+On macOS the build can fail with `docker-credential-desktop: executable file not found in $PATH`. It means that the Docker Desktop tools are not in PATH, this fixes it for the current terminal:
+
+```bash
+export PATH="/Applications/Docker.app/Contents/Resources/bin:$PATH"
+```
+
 Run the container:
 
 ```bash
