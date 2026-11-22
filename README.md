@@ -104,19 +104,19 @@ Then open http://localhost:5001 (port 5000 is often used by AirPlay on macOS).
 
 Comparison of the 4 runs (parameters and metrics):
 
-![MLflow runs](screenshots/07_mlflow_compare.jpg)
+![MLflow runs](screenshots/07_mlflow_compare.png)
 
 The champion run with its metrics, parameters and the registered model version:
 
-![MLflow run](screenshots/08_mlflow_run.jpg)
+![MLflow run](screenshots/08_mlflow_run.png)
 
 Artifacts of the run (`model.joblib`):
 
-![MLflow artifacts](screenshots/09_mlflow_artifacts.jpg)
+![MLflow artifacts](screenshots/09_mlflow_artifacts.png)
 
 Model Registry: `german-credit-risk`, version 1, alias `champion`:
 
-![MLflow registry](screenshots/10_mlflow_registry.jpg)
+![MLflow registry](screenshots/10_mlflow_registry.png)
 
 ## 2. FastAPI app (Practical Task 6)
 
@@ -246,15 +246,15 @@ The build finished without errors, and the container gives the same results as t
 
 Swagger UI from the container:
 
-![Swagger UI](screenshots/01_docs.jpg)
+![Swagger UI](screenshots/01_docs.png)
 
 `GET /`:
 
-![Root endpoint](screenshots/02_root.jpg)
+![Root endpoint](screenshots/02_root.png)
 
 `POST /predict` with the example client:
 
-![Predict endpoint](screenshots/03_predict.jpg)
+![Predict endpoint](screenshots/03_predict.png)
 
 ## 4. Streamlit frontend (SIS 3)
 
@@ -276,15 +276,15 @@ Then open http://localhost:8501. The address of the API can be changed with the 
 
 The form (the API runs in the Docker container):
 
-![Streamlit form](screenshots/04_streamlit_form.jpg)
+![Streamlit form](screenshots/04_streamlit_form.png)
 
 The default client: good risk, probability of bad risk 8.1%:
 
-![Streamlit good risk](screenshots/05_streamlit_good.jpg)
+![Streamlit good risk](screenshots/05_streamlit_good.png)
 
 The same client, but with a loan for 48 months, 8000 DM and credit history "existing paid back till now": bad risk, 60.5%:
 
-![Streamlit bad risk](screenshots/06_streamlit_bad.jpg)
+![Streamlit bad risk](screenshots/06_streamlit_bad.png)
 
 ## Run the whole system
 
