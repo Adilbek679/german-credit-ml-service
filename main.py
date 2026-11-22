@@ -1,3 +1,4 @@
+import json
 from typing import Literal
 
 import joblib
@@ -13,6 +14,10 @@ app = FastAPI(
 # the model is trained and saved by train.py
 # it is loaded one time when the app starts, and then used in every /predict request
 model = joblib.load("model.joblib")
+
+# name and version of this model in the MLflow Model Registry (also written by train.py)
+with open("model_info.json") as f:
+    model_info = json.load(f)
 
 
 # the same 20 features as in train.py, the text values are the readable values from code_maps
@@ -69,7 +74,11 @@ class CreditApplication(BaseModel):
 
 @app.get("/")
 def root():
-    return {"message": "ML API is running"}
+    return {
+        "message": "ML API is running",
+        "model_name": model_info["model_name"],
+        "model_version": model_info["version"]
+    }
 
 
 @app.post("/predict")

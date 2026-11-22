@@ -1,0 +1,6 @@
+{
+  "model_name": "german-credit-risk",
+  "version": 1,
+  "run": "logreg_balanced",
+  "f1": 0.658
+}
